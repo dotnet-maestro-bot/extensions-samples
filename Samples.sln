@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		eng\Versions.props = eng\Versions.props
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows.Sample", "src\Libraries\Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows.Sample\Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows.Sample.csproj", "{76C033A1-652E-4975-BA5B-26706AD426BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{37E6D74C-6B72-4424-BF44-E9C4A1F8C003}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37E6D74C-6B72-4424-BF44-E9C4A1F8C003}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37E6D74C-6B72-4424-BF44-E9C4A1F8C003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C033A1-652E-4975-BA5B-26706AD426BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C033A1-652E-4975-BA5B-26706AD426BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C033A1-652E-4975-BA5B-26706AD426BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C033A1-652E-4975-BA5B-26706AD426BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 		{B3006458-C6D6-4BB5-A280-C3720E714E02} = {301296EC-54FF-4ADC-B2D1-281E0C7F2867}
 		{26562E78-4251-44AB-A491-C779BF65B56B} = {7C5E1DC5-56A2-48A2-9B10-C6618CBE776E}
 		{37E6D74C-6B72-4424-BF44-E9C4A1F8C003} = {B3006458-C6D6-4BB5-A280-C3720E714E02}
+		{76C033A1-652E-4975-BA5B-26706AD426BF} = {7C5E1DC5-56A2-48A2-9B10-C6618CBE776E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6083D400-BF26-4ACE-86A8-778D26A8FA6A}

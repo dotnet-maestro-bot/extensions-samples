@@ -1,6 +1,6 @@
 ﻿
 # Kick off the binary in the background. [Prints stats every 5s]
-Start-Process -NoNewWindow .\ResourceUtilization.exe
+Start-Process -NoNewWindow .\ResourceMonitoring.exe
 
 # Watch the perf counters, as well as the output.  [Prints stats every 20s]
 $manualResetEvent = New-Object -TypeName System.Threading.ManualResetEvent -ArgumentList $false
