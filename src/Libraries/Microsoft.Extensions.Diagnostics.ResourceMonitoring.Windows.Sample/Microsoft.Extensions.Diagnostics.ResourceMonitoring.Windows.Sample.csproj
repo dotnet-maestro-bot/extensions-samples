@@ -10,30 +10,6 @@
     <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="$(MicrosoftBclTimeProviderVersion)" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(MicrosoftExtensionsHostingVersion)" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows" Version="$(MicrosoftExtensionsComplianceTestSupportVersion)" />
-    <!-- <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
-    <PackageReference Include="Microsoft.R9.Extensions.Diagnostics.ResourceUtilization" Version="$(R9Release)" />
-    <PackageReference Include="Microsoft.R9.Extensions.Diagnostics.ResourceUtilization.Windows" Version="$(R9Release)" />
-    <PackageReference Include="Microsoft.R9.Extensions.Time" Version="$(R9Release)" /> -->
-  </ItemGroup>
-
-  <!-- <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' or '$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="System.DirectoryServices.Protocols" Version="7.0.0" />
-  </ItemGroup> -->
-
-  <ItemGroup>
-    <!-- <None Update="..\common\SetupCounters.ps1" Link="\%(Filename)%(Extension)">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None> -->
-    <None Update="Dockerfile">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="BuildAndRun.ps1">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="RunAndMonitor.ps1">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

@@ -48,7 +48,7 @@ internal static class Program
             await hostedService.StartAsync(CancellationToken.None).ConfigureAwait(false);
 
             // We wait 60 seconds to collect the data and see how it works.
-            await Clock.Delay(TimeSpan.FromSeconds(60), CancellationToken.None).ConfigureAwait(false);
+            await Clock.Delay(TimeSpan.FromSeconds(360), CancellationToken.None).ConfigureAwait(false);
 
             // We gracefully shutdown the hosted service.
             await hostedService.StopAsync(CancellationToken.None).ConfigureAwait(false);
