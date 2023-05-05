@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="$(MicrosoftBclTimeProviderVersion)" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(MicrosoftExtensionsHostingVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows" Version="$(MicrosoftExtensionsComplianceTestSupportVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.ResourceMonitoring" Version="$(MicrosoftExtensionsDiagnosticsResourceMonitoringVersion)" />
   </ItemGroup>
 
 </Project>

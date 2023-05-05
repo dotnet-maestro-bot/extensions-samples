@@ -8,23 +8,27 @@
       <Uri>https://github.com/dotnet/runtime</Uri>
       <Sha>3232ad36a791b7b8dce81c3358cd6cec4e42c06e</Sha>
     </Dependency>
-    <Dependency Name="Microsoft.Extensions.ExceptionSummarization" Version="8.0.0-alpha.1.23253.16">
+    <Dependency Name="Microsoft.Extensions.ExceptionSummarization" Version="8.0.0-alpha.1.23254.15">
       <Uri>https://github.com/dotnet/r9</Uri>
       <Sha>3f4094533c76eff0c706a6b08823045c0bb8896b</Sha>
     </Dependency>
-    <Dependency Name="Microsoft.Extensions.Compliance.TestSupport" Version="8.0.0-alpha.1.23253.16">
+    <Dependency Name="Microsoft.Extensions.Compliance.TestSupport" Version="8.0.0-alpha.1.23254.15">
       <Uri>https://github.com/dotnet/r9</Uri>
       <Sha>3f4094533c76eff0c706a6b08823045c0bb8896b</Sha>
     </Dependency>
-    <Dependency Name="Microsoft.Extensions.Compliance.Redaction" Version="8.0.0-alpha.1.23253.16">
+    <Dependency Name="Microsoft.Extensions.Compliance.Redaction" Version="8.0.0-alpha.1.23254.15">
       <Uri>https://github.com/dotnet/r9</Uri>
       <Sha>3f4094533c76eff0c706a6b08823045c0bb8896b</Sha>
     </Dependency>
-    <Dependency Name="Microsoft.Extensions.Telemetry.Abstractions" Version="8.0.0-alpha.1.23253.16">
+    <Dependency Name="Microsoft.Extensions.Diagnostics.ResourceMonitoring" Version="8.0.0-alpha.1.23254.15">
       <Uri>https://github.com/dotnet/r9</Uri>
       <Sha>3f4094533c76eff0c706a6b08823045c0bb8896b</Sha>
     </Dependency>
-    <Dependency Name="Microsoft.Extensions.Telemetry.TestSupport" Version="8.0.0-alpha.1.23253.16">
+    <Dependency Name="Microsoft.Extensions.Telemetry.Abstractions" Version="8.0.0-alpha.1.23254.15">
+      <Uri>https://github.com/dotnet/r9</Uri>
+      <Sha>3f4094533c76eff0c706a6b08823045c0bb8896b</Sha>
+    </Dependency>
+    <Dependency Name="Microsoft.Extensions.Telemetry.TestSupport" Version="8.0.0-alpha.1.23254.15">
       <Uri>https://github.com/dotnet/r9</Uri>
       <Sha>3f4094533c76eff0c706a6b08823045c0bb8896b</Sha>
     </Dependency>

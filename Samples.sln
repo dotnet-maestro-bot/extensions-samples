@@ -2,16 +2,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{301296EC-54FF-4ADC-B2D1-281E0C7F2867}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7C5E1DC5-56A2-48A2-9B10-C6618CBE776E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{B3006458-C6D6-4BB5-A280-C3720E714E02}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.ExceptionSummarization.Sample", "src\Libraries\Microsoft.Extensions.ExceptionSummarization.Sample\Microsoft.Extensions.ExceptionSummarization.Sample.csproj", "{26562E78-4251-44AB-A491-C779BF65B56B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Compliance.TestSupport.Tests", "src\Testing\Microsoft.Extensions.Compliance.TestSupport.Tests\Microsoft.Extensions.Compliance.TestSupport.Tests.csproj", "{37E6D74C-6B72-4424-BF44-E9C4A1F8C003}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{804E5EA2-22B3-4327-B260-213B2E733508}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -24,7 +14,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		eng\Versions.props = eng\Versions.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows.Sample", "src\Libraries\Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows.Sample\Microsoft.Extensions.Diagnostics.ResourceMonitoring.Windows.Sample.csproj", "{76C033A1-652E-4975-BA5B-26706AD426BF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{301296EC-54FF-4ADC-B2D1-281E0C7F2867}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7C5E1DC5-56A2-48A2-9B10-C6618CBE776E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{B3006458-C6D6-4BB5-A280-C3720E714E02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.ExceptionSummarization.Sample", "src\Libraries\Microsoft.Extensions.ExceptionSummarization.Sample\Microsoft.Extensions.ExceptionSummarization.Sample.csproj", "{26562E78-4251-44AB-A491-C779BF65B56B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Compliance.TestSupport.Tests", "src\Testing\Microsoft.Extensions.Compliance.TestSupport.Tests\Microsoft.Extensions.Compliance.TestSupport.Tests.csproj", "{37E6D74C-6B72-4424-BF44-E9C4A1F8C003}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Diagnostics.ResourceMonitoring.Sample", "src\Libraries\Microsoft.Extensions.Diagnostics.ResourceMonitoring.Sample\Microsoft.Extensions.Diagnostics.ResourceMonitoring.Sample.csproj", "{76C033A1-652E-4975-BA5B-26706AD426BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
