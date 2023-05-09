@@ -1,0 +1,43 @@
+﻿// Copyright (c) Microsoft Corporation. All Rights Reserved.
+
+using System.Diagnostics.CodeAnalysis;
+using System.Net;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+namespace TracingHttp.NetFramework.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class ChatsController : Controller
+    {
+        private readonly ITracingService _tracingService;
+
+        public ChatsController(ITracingService tracingService)
+        {
+            _tracingService = tracingService;
+        }
+
+        [HttpGet("{chatId}")]
+        public async Task<IActionResult> GetChatById(string chatId)
+        {
+            var statusCode = await _tracingService.GetChatById(chatId);
+
+            return statusCode switch
+            {
+                HttpStatusCode.BadRequest => BadRequest(),
+                HttpStatusCode.NotFound => NotFound(),
+                HttpStatusCode.OK => Ok("Learn about R9: http://aka.ms/r9"),
+                _ => NotFound()
+            };
+        }
+
+        [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Used through reflection")]
+        [HttpGet("details/{chatId}")]
+        public IActionResult Details(string chatId)
+        {
+            ViewData["Message"] = _tracingService.GetTracingServiceTags();
+            return View();
+        }
+    }
+}
