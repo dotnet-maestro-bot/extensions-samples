@@ -27,10 +27,13 @@
   <PropertyGroup Label="Automated">
     <!-- dotnet/r9 -->
     <MicrosoftAspNetCoreTelemetryMiddlewareVersion>8.0.0-alpha.1.23257.14</MicrosoftAspNetCoreTelemetryMiddlewareVersion>
+    <MicrosoftAspNetCoreTelemetryVersion>8.0.0-alpha.1.23257.14</MicrosoftAspNetCoreTelemetryVersion>
     <MicrosoftExtensionsComplianceRedactionVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsComplianceRedactionVersion>
     <MicrosoftExtensionsComplianceTestingVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsComplianceTestingVersion>
     <MicrosoftExtensionsDiagnosticsExceptionSummarizationVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsDiagnosticsExceptionSummarizationVersion>
+    <MicrosoftExtensionsHttpTelemetryVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsHttpTelemetryVersion>
     <MicrosoftExtensionsTelemetryAbstractionsVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsTelemetryAbstractionsVersion>
+    <MicrosoftExtensionsTelemetryConsoleVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsTelemetryConsoleVersion>
     <MicrosoftExtensionsTelemetryTestingVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsTelemetryTestingVersion>
     <MicrosoftExtensionsTelemetryVersion>8.0.0-alpha.1.23257.14</MicrosoftExtensionsTelemetryVersion>
     <!-- dotnet/aspnetcore -->
