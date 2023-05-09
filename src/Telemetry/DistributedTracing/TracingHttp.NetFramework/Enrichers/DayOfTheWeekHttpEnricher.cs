@@ -1,9 +1,10 @@
-﻿// Copyright (c) Microsoft Corporation. All Rights Reserved.
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
 
+using System;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
-using Microsoft.R9.Extensions.Time;
-using Microsoft.R9.Extensions.Tracing.Http;
+using Microsoft.AspNetCore.Telemetry;
 
 namespace TracingHttp.NetFramework
 {
@@ -13,7 +14,7 @@ namespace TracingHttp.NetFramework
         {
             if (request != null)
             {
-                _ = activity.SetTag("HttpEnricher_DayOfWeek", SystemClock.Instance.UtcNow.DayOfWeek);
+                _ = activity.SetTag("HttpEnricher_DayOfWeek", TimeProvider.System.GetUtcNow().DayOfWeek);
             }
         }
     }

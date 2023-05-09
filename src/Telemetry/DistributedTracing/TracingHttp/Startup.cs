@@ -2,6 +2,11 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using Microsoft.AspNetCore.Builder;
+#if NETCOREAPP3_1
+#else
+using Microsoft.AspNetCore.Hosting;
+#endif
+using Microsoft.AspNetCore.Internal;
 using Microsoft.AspNetCore.Telemetry;
 using Microsoft.Extensions.Compliance.Classification.Simple;
 using Microsoft.Extensions.Compliance.Redaction;
@@ -25,16 +30,20 @@ internal sealed class Startup
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-        // Configure redaction. XXHashRedactor is used as an example
-        _ = services.AddRedaction(redaction => redaction.SetXXHashRedactor(_ => { }, SimpleClassifications.PrivateData));
-
+#if NETCOREAPP3_1
         _ = services.AddRouting();
+        _ = services.AddControllersWithViews();
+        _ = services.AddHttpClient();
+#else
+        _ = services
+            .AddMvc()
+            .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_2);
+#endif
 
         _ = services.AddSingleton<ITracingService, TracingService>();
 
-        _ = services.AddControllersWithViews();
-
-        _ = services.AddHttpClient();
+        // Configure redaction. XXHashRedactor is used as an example
+        _ = services.AddRedaction(redaction => redaction.SetXXHashRedactor(_ => { }, SimpleClassifications.PrivateData));
 
         // Adding service metadata information using appsettings.json configuration file:
         _ = services.AddServiceMetadata(Configuration.GetSection("ServiceMetadata"));
@@ -67,6 +76,7 @@ internal sealed class Startup
             .AddConsoleExporter()); // Console exporter is for demo purposes. AddGenevaExporter() to be used in real world.
     }
 
+#if NETCOREAPP3_1
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "Startup class")]
     public void Configure(IApplicationBuilder app)
@@ -75,4 +85,16 @@ internal sealed class Startup
 
         _ = app.UseEndpoints(endpoints => _ = endpoints.MapDefaultControllerRoute());
     }
+#else
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+#pragma warning disable IDE0060 // Remove unused parameter
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+#pragma warning restore IDE0060 // Remove unused parameter
+    {
+        _ = app.UseEndpointRouting();
+
+        _ = app.UseMvc();
+    }
+#endif
 }

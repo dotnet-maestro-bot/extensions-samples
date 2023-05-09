@@ -5,27 +5,53 @@
     <Description>Demonstrates how to use R9 Tracing HTTP capabilities with .NET Framework projects.</Description>
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net472;net461</TargetFrameworks>
-    <R9Release>1.30.0-commit-a5f17c83c</R9Release>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Enrichers\DayOfTheWeekHttpClientEnricher.cs" />
+    <Compile Remove="Enrichers\DayOfTheWeekHttpEnricher.cs" />
+    <Compile Remove="ServiceMetadataValidator.cs" />
+    <Compile Remove="Services\TracingService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Enrichers\DayOfTheWeekHttpClientEnricher.cs" />
+    <Content Include="Enrichers\DayOfTheWeekHttpEnricher.cs" />
+    <Content Include="ServiceMetadataValidator.cs" />
+    <Content Include="Services\TracingService.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Analyzers" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Server.IIS" Version="2.2.6" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.32" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.4.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.0" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="$(MicrosoftBclTimeProviderVersion)" />
+    <!--<PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.32" />-->
+
+    
+    <PackageReference Include="Microsoft.Extensions.Compliance.Testing" Version="$(MicrosoftExtensionsComplianceTestingVersion)" />
+    
+    <!--<PackageReference Include="Microsoft.Extensions.Compliance.Redaction" Version="$(MicrosoftExtensionsComplianceRedactionVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Http.Telemetry" Version="$(MicrosoftExtensionsHttpTelemetryVersion)" />
+    <PackageReference Include="Microsoft.AspNetCore.Telemetry" Version="$(MicrosoftAspNetCoreTelemetryVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Telemetry" Version="$(MicrosoftExtensionsTelemetryVersion)" />-->
+
+    <!--
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.5" />
     <PackageReference Include="Microsoft.R9.Extensions.Redaction.xxHash" Version="$(R9Release)" />
     <PackageReference Include="Microsoft.R9.Extensions.Time" Version="$(R9Release)" />
     <PackageReference Include="Microsoft.R9.Extensions.Tracing.Http" Version="$(R9Release)" />
     <PackageReference Include="Microsoft.R9.Extensions.HttpClient.Tracing" Version="$(R9Release)" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.2.0-beta1" />
-    <PackageReference Include="System.Net.Http" Version="4.3.0" />
+    -->
 
     <!-- Using invulnerable package version -->
-    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.7.1" />
+    <!--<PackageReference Include="System.Security.Cryptography.Xml" Version="4.7.1" />-->
   </ItemGroup>
 
   <ItemGroup>

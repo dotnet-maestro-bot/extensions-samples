@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DistributedTracing", "Distr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TracingHttp", "src\Telemetry\DistributedTracing\TracingHttp\TracingHttp.csproj", "{C7B96604-FA0C-40D3-BEDC-6C140B30E1D9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TracingHttp.NetFramework", "src\Telemetry\DistributedTracing\TracingHttp.NetFramework\TracingHttp.NetFramework.csproj", "{81465D7B-B97E-45F7-A85E-39124B51B50E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{C7B96604-FA0C-40D3-BEDC-6C140B30E1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B96604-FA0C-40D3-BEDC-6C140B30E1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7B96604-FA0C-40D3-BEDC-6C140B30E1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81465D7B-B97E-45F7-A85E-39124B51B50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81465D7B-B97E-45F7-A85E-39124B51B50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81465D7B-B97E-45F7-A85E-39124B51B50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81465D7B-B97E-45F7-A85E-39124B51B50E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{F8A03BBA-9846-4C9B-A4BE-9CBE8B416974} = {CBA4C7B6-6F01-4BD4-BC90-7DB1F1D5034C}
 		{52BB3E11-907B-4509-A35B-42089C16D473} = {72B462BA-F903-4CA7-8A0A-6C030BE408BC}
 		{C7B96604-FA0C-40D3-BEDC-6C140B30E1D9} = {52BB3E11-907B-4509-A35B-42089C16D473}
+		{81465D7B-B97E-45F7-A85E-39124B51B50E} = {52BB3E11-907B-4509-A35B-42089C16D473}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6083D400-BF26-4ACE-86A8-778D26A8FA6A}

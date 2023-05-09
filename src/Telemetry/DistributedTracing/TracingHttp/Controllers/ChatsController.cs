@@ -28,7 +28,11 @@ public class ChatsController : Controller
             HttpStatusCode.BadRequest => BadRequest(),
             HttpStatusCode.NotFound => NotFound(),
             HttpStatusCode.OK => Ok("Learn about R9: http://aka.ms/r9"),
+#if NETCOREAPP3_1
             _ => Problem()
+#else
+            _ => NotFound()
+#endif
         };
     }
 

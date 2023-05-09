@@ -1,13 +1,15 @@
-﻿// Copyright (c) Microsoft Corporation. All Rights Reserved.
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Telemetry.Http;
 using Microsoft.R9.Extensions.Telemetry;
-using Microsoft.R9.Extensions.Time;
 
 namespace TracingHttp.NetFramework
 {
@@ -22,7 +24,7 @@ namespace TracingHttp.NetFramework
         public IEnumerable<KeyValuePair<string, string?>> GetTracingServiceTags()
         {
             using var activity = _activitySource.StartActivity("ActivityName");
-            activity?.SetTag(nameof(TracingService), SystemClock.Instance.UtcNow.ToString(CultureInfo.InvariantCulture));
+            activity?.SetTag(nameof(TracingService), TimeProvider.System.GetUtcNow().ToString(CultureInfo.InvariantCulture));
             return activity?.Tags ?? Enumerable.Empty<KeyValuePair<string, string?>>();
         }
 
