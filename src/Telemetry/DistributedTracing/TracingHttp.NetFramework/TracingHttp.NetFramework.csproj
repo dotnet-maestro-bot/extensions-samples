@@ -4,7 +4,7 @@
     <RootNamespace>TracingHttp.NetFramework</RootNamespace>
     <Description>Demonstrates how to use R9 Tracing HTTP capabilities with .NET Framework projects.</Description>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net472;net461</TargetFrameworks>
+    <TargetFrameworks>net461</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Enrichers\DayOfTheWeekHttpClientEnricher.cs" />
@@ -32,7 +32,7 @@
     <PackageReference Include="System.Net.Http" Version="4.3.0" />
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.4.0" />
     <PackageReference Include="Microsoft.Bcl.TimeProvider" Version="$(MicrosoftBclTimeProviderVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.32" />
+    <!--<PackageReference Include="Microsoft.Extensions.Primitives" Version="3.1.32" />-->
 
     
     <PackageReference Include="Microsoft.Extensions.Compliance.Testing" Version="$(MicrosoftExtensionsComplianceTestingVersion)" />
